@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparrow Post</title>
+    <link rel="shortcut icon" href="images/favicon2.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <a href="#" class="logo">Sparrow Post</a>
+
+        <ul>
+            <li><a href="#header" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            
+        </ul>
+    </header>
+
+    <section>
+        <h2 id="text">Sparrow<br><span>Post</span></h2>
+        <img src="images/bird1.png" alt="bird" id="bird1">
+        <img src="images/bird2.png" alt="bird" id="bird2">
+        <img src="images/forest.png" alt="forest" id="forest">
+        
+
+        <a href="ChatApp/login.php" id="Sigin">Sign in</a>
+        <a href="ChatApp/index.php" id="Sigup">Sign up</a>
+
+        <img src="images/rocks.png" alt="rocks" id="rocks">
+        <img src="images/water.png" alt="water" id="water">
+
+    </section>
+    <div id="about"></div>
+    <div class="sec">
+        <div class="box">
+            <div class="card" style="min-height: 690px;font-size: 0.5em;">
+                <h2 style="padding: 20px;">Let’s connect from here to anyone &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/users.png" alt="users image" style="position:absolute;margin-top: 30px;margin-bottom: 30px;"> <br> for explore new </h2>
+                <p style="padding: 20px;font-size: 2.7em;margin-left: 30px;">You can chat with professionals as easy way <br><br>Feel free to communicate <br> & explore something</p>
+                <br><br><br>
+                <div >
+                    <br><img style="margin-left: -60px;padding: 10px;" src="images/users select.gif" alt="select user gif" width="500px">
+                </div>
+            </div> <br><br>
+        </div>
+    </div>
+
+   <div style="background: linear-gradient(#094b65,#072430);">
+    <div class="box1" style="position:relative;
+    padding-left: 100px;padding-right: 100px;margin-top: -100px;
+    background: linear-gradient(#094b65,#072430);">
+        <div class="box">
+            <div class="card" style="min-height: 890px;font-size: 0.5em;">
+
+                <h2 style="padding: 20px;font-size: 3.5em;color:#fff;margin-bottom: 10px;">The place for anyone from anywhere to explore anything from <br> <div style="text-align: center;">the help of <span style="font-size: 1.4em;color: #0f8abbfb;">professionals</span></div></h2>
+                
+                <img style="position: absolute;margin-left: 300px;" src="images/professional.gif" alt="select professionals">
+            </div><br><br>
+        </div>
+
+    </div>
+    </div>
+
+
+    <script>
+        let text = document.getElementById('text');
+        let bird1 = document.getElementById('bird1');
+        let bird2 = document.getElementById('bird2');
+        let sigin = document.getElementById('Sigin');
+        let sigup = document.getElementById('Sigup');
+        let rock = document.getElementById('rocks');
+        let forest = document.getElementById('forest');
+        let water = document.getElementById('water');
+        let header = document.getElementById('header');
+
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+
+            text.style.top = 50 + value * -0.5+'%';
+            bird1.style.top = value * -1.5+'px';
+            bird1.style.left = value * 2+'px';
+
+            bird2.style.top = value * -1.5+'px';
+            bird2.style.left = value * -5+'px';
+
+            sigin.style.marginTop = value * 1.5 +'px';
+            sigup.style.marginTop = value * 1.5 +'px';
+
+            rock.style.top = value * -0.12 + 'px';
+            forest.style.top = value * 0.25 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js" integrity="sha512-RX/OFugt/bkgwRQg4B22KYE79dQhwaPp2IZaA/YyU3GMo/qY7GrXkiG6Dvvwnds6/DefCfwPTgCXnaC6nAgVYw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  VanillaTilt.init(document.querySelector(".box"), {
+      max: 5,
+      speed: 400,
+  
+  });
+ </script>    
+ <script>
+    VanillaTilt.init(document.querySelector(".box1"), {
+      max: 5,
+      speed: 400,
+  
+  });
+ </script>
+    
+</body>
+</html>
